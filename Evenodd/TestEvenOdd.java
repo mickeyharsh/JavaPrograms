@@ -3,10 +3,10 @@ class TestEvenOdd
 {
 	public static void main(String args[])
   	{
-    		int num;
+    		double num;
     		System.out.println("Enter an Integer number:");
     		Scanner input = new Scanner(System.in);
-    		num = input.nextInt();
+    		num = input.nextDouble();
 		if(num>0)
     		{
     			if ( num % 2 == 0 )
@@ -18,5 +18,19 @@ class TestEvenOdd
 		{
 			System.out.println("The number you is entered is negative!!");
 		}
+		try 
+		{
+			if(num%1!=0)
+			{
+				throw new Exception();
+			}
+
+		} 
+		catch (Exception e)
+		{
+			System.out.println("Real Number exception"+e);
+		}
+		
+		
 	}
 }
